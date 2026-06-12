@@ -74,6 +74,9 @@ yarn-error.log
 !.yarn/sdks
 !.yarn/versions
 
+# VS Code
+.vscode/
+
 # Ruby Bundler
 .bundle/
 
