@@ -38,7 +38,7 @@ const ANCHOR_Y = GRIP_TOP + GRIP_SIZE;
 
 // 이동점 초기값: grip 초기 위치의 중앙
 const GRIP_CENTER_X = GRIP_LEFT + GRIP_SIZE / 2;
-const GRIP_CENTER_Y = GRIP_TOP + GRIP_SIZE / 2;
+const GRIP_CENTER_Y = (GRIP_TOP + GRIP_SIZE / 2) + 20;
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -51,8 +51,10 @@ function App() {
       translateY.value = e.translationY;
     })
     .onEnd(() => {
-      translateX.value = withSpring(0, { damping: 12, stiffness: 120 });
-      translateY.value = withSpring(0, { damping: 12, stiffness: 120 });
+      // damping: 감쇠 (클수록 빨리 멈춤)
+      // stiffness: 탄성 (클수록 빠르게 복귀)
+      translateX.value = withSpring(0, { damping: 40, stiffness: 80 });
+      translateY.value = withSpring(0, { damping: 40, stiffness: 80 });
     });
 
   const gripStyle = useAnimatedStyle(() => ({
