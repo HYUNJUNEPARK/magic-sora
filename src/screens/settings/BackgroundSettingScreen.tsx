@@ -105,12 +105,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   previewImage: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     width: '100%',
     height: '100%',
   },
   previewDefault: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: '#F2F2F7',
   },
   previewSora: {
